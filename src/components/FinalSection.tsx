@@ -83,7 +83,7 @@ const FinalSection = () => {
                 <div className="h-1 w-32 bg-gradient-to-r from-pink-400 to-purple-400 mx-auto rounded-full"></div>
                 
                 <p className="text-xl md:text-2xl text-pink-200 italic font-light leading-relaxed">
-                  Tum ho toh sab kuch hai ✨
+                  Tum ho toh Praja hai 💗✨
                 </p>
               </div>
             </div>
@@ -100,7 +100,7 @@ const FinalSection = () => {
             </div>
 
             {/* Final Quote */}
-            <div className="backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10">
+            <div className="backdrop-blur-sm bg-white/5 rounded-2xl p-6 border border-white/10 mb-10">
               <p className="text-lg text-gray-300 leading-relaxed">
                 "Some people search their whole lives for what I found in you - 
                 a person who makes every day feel like a gift, every moment feel like magic, 
