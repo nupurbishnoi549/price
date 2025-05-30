@@ -1,12 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect, useState } from 'react';
+import HeroSection from '../components/HeroSection';
+import Navbar from '../components/Navbar';
+import AboutSection from '../components/AboutSection';
+import TimelineSection from '../components/TimelineSection';
+import GallerySection from '../components/GallerySection';
+import SurprisesSection from '../components/SurprisesSection';
+import FinalSection from '../components/FinalSection';
+import FloatingElements from '../components/FloatingElements';
 
 const Index = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="relative min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 overflow-x-hidden">
+      <FloatingElements mousePosition={mousePosition} />
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <TimelineSection />
+      <GallerySection />
+      <SurprisesSection />
+      <FinalSection />
     </div>
   );
 };
