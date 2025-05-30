@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { CheckCircle, Sparkles, Crown, Heart } from 'lucide-react';
+import Anu from '../../public/anu.png'
 
 const AboutSection = () => {
   const sectionRef = useRef(null);
@@ -56,7 +57,7 @@ const AboutSection = () => {
 
                 {/* 🖼️ Anu's Image */}
                 <img
-                  src="public/anu.png"
+                  src={Anu}
                   alt="Anu"
                   className="md:w-[250px] md:h-96 h-[230px] object-contain rounded-xl border-4 border-pink-300 shadow-xl z-10 animate-pulse"
                 />
