@@ -58,7 +58,7 @@ const AboutSection = () => {
                 <img
                   src="public/anu.png"
                   alt="Anu"
-                  className="w-[250px] h-96 object-contain rounded-xl border-4 border-pink-300 shadow-xl z-10 animate-pulse"
+                  className="md:w-[250px] md:h-96 h-[230px] object-contain rounded-xl border-4 border-pink-300 shadow-xl z-10 animate-pulse"
                 />
 
                 {/* Glow effect */}

@@ -4,7 +4,7 @@ import { Sparkles, Heart, Star } from 'lucide-react';
 
 const HeroSection = () => {
   const [text, setText] = useState('');
-  const fullText = "Every Queen deserves a Kingdom – You are mine.";
+  const fullText = "Every Queen deserves a Kingdom – And you rule mine effortlessly.";
   const [showCrown, setShowCrown] = useState(false);
 
   useEffect(() => {
