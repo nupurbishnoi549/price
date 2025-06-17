@@ -5,7 +5,7 @@ const shayaris = [
 
   `rakh loon chupa ke main kahin tujhko,\nsaaya bhi tera na main doon.`,
 
-  `aadat jaise hai tu meri,\naadatein kaise bhoolein bhala?`,
+  `aadaton jesee hai tu mere,\naadaten kaise bhooloon bhalaa?`,
 
   `Take my hand,\ntake my whole life too,\nFor I can't help being with you.`
 ];
