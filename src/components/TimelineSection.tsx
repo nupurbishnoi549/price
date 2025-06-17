@@ -20,7 +20,26 @@ const TimelineSection = () => {
         "You don’t try to be perfect — you're real, and that’s what makes you rare 💫. In a world full of filters and masks 🎭, your honesty feels like magic 🪄🌸.",
       emoji: "🌿",
       color: "from-lime-400 to-green-500"
+    },
+    {
+      date: "Unspoken Efforts",
+      title: "Show-Off Nahi, Tu Hi Kaafi Hai 🫀",
+      description:
+        "Tere jaisa hi tu reh 🧍‍♂️, baat kam kare 🤫, par sachcha rahe 🧡.\n" +
+        "Pyaar dikhaye na sahi 💬, par mehsoos toh ho 💓.\n" +
+        "Tere har silence mein ek apnapan sa ho 🤍🌌.\n\n" +
+        "Tu photo na maange, theek hai 📷🚫,\n" +
+        "Bas tu apni bhejta rahe ✉️😊.\n" +
+        "Aur jo tu keh nahi paata 🧠💭,\n" +
+        "Woh bas samajh jaau 🫂🌙.\n\n" +
+        "Haan, tumhare efforts mujhse kahin zyada hain ⚡,\n" +
+        "Par mere 0 nahi hain... sab bataya bhi nahi jaata 😶‍🌫️💗.\n\n" +
+        "Tu bas mera rahe, yahi kaafi hai 💫🫀,\n" +
+        "Show-off nahi chahiye... bas tu hi kaafi hai 🚫🎭.",
+      emoji: "🪶",
+      color: "from-rose-400 to-pink-500"
     }
+
 
   ];
 
