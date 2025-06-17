@@ -40,7 +40,7 @@ const ShayariSection = () => {
   }, [wordIndex, currentBox]);
 
   return (
-    <section className="min-h-screen py-14 px-4 bg-gradient-to-br from-[#fcefee] via-[#fff1f3] to-[#fdeee6] flex flex-col items-center justify-start space-y-10">
+    <section id='timeline' className="min-h-screen py-14 px-4 bg-gradient-to-br from-[#fcefee] via-[#fff1f3] to-[#fdeee6] flex flex-col items-center justify-start space-y-10">
       {/* Heading */}
       <h2 className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500 bg-clip-text text-transparent drop-shadow-md">
         🎁 Lyrics that reminds of you ✍️💖

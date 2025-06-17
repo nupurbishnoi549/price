@@ -44,7 +44,7 @@ const TimelineSection = () => {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="py-20 px-4 sm:px-6">
+    <section id="hero" ref={sectionRef} className="py-20 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text text-transparent">

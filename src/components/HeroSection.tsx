@@ -21,7 +21,7 @@ Wishing you a very Happy Birthday ❣️🌸 May your day be as special as you a
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-gradient-to-r from-[#1e3c72] via-[#2a5298] to-[#1e3c72] justify-center overflow-hidden font-['Yantramanav']">
+    <section id="about" className="relative min-h-screen flex items-center bg-gradient-to-r from-[#1e3c72] via-[#2a5298] to-[#1e3c72] justify-center overflow-hidden font-['Yantramanav']">
       {/* Background */}
       <div className="absolute inset-0">
         {/* Dreamy Gradient */}
