@@ -12,7 +12,7 @@ const FloatingElements: React.FC<FloatingElementsProps> = ({ mousePosition }) =>
       {/* Enhanced Floating A Monogram */}
       <div className="absolute top-20 right-20 opacity-30 animate-spin-slow">
         <div className="w-20 h-20 rounded-full bg-gradient-to-r from-pink-400 to-purple-400 flex items-center justify-center text-white font-bold text-3xl shadow-lg shadow-pink-400/30 backdrop-blur-sm border border-white/20">
-          A
+          M
         </div>
       </div>
 

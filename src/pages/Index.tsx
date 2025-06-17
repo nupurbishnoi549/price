@@ -4,9 +4,6 @@ import HeroSection from '../components/HeroSection';
 import Navbar from '../components/Navbar';
 import AboutSection from '../components/AboutSection';
 import TimelineSection from '../components/TimelineSection';
-import GallerySection from '../components/GallerySection';
-import SurprisesSection from '../components/SurprisesSection';
-import FinalSection from '../components/FinalSection';
 import FloatingElements from '../components/FloatingElements';
 
 const Index = () => {
@@ -25,12 +22,9 @@ const Index = () => {
     <div className="relative min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 overflow-x-hidden">
       <FloatingElements mousePosition={mousePosition} />
       <Navbar />
+      <TimelineSection />
       <HeroSection />
       <AboutSection />
-      <TimelineSection />
-      <GallerySection />
-      <SurprisesSection />
-      <FinalSection />
     </div>
   );
 };

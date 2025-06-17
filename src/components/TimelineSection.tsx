@@ -7,33 +7,21 @@ const TimelineSection = () => {
 
   const memories = [
     {
-      date: "First Meeting",
-      title: "The Day Everything Changed",
-      description: "When I first saw you, time stopped. Your smile lit up the entire room.",
-      emoji: "🌟",
-      color: "from-pink-400 to-rose-400"
+      date: "19th June",
+      title: "Happy Birthday Mr. Mushroom 🎂",
+      description: "You don’t say much, but your presence says it all. You’re my calm, my comfort, and my favourite hello. I may not show it (but muje pta h I show 😂), but I genuinely care — deeply. You don’t try to be perfect — you’re real, and that’s what makes you rare. On your special day, just know… I’m really glad you exist. 🌸",
+      emoji: "🎉",
+      color: "from-yellow-400 to-orange-400"
     },
     {
-      date: "22nd March",
-      title: "Your First Exam Duty",
-      description: "Watching you being so dedicated and professional... I smiled 100 times that day.",
-      emoji: "📚",
-      color: "from-purple-400 to-indigo-400"
-    },
-    {
-      date: "Every Conversation",
-      title: "Words That Matter",
-      description: "Every word you speak, every laugh you share, makes my day brighter.",
-      emoji: "💭",
-      color: "from-blue-400 to-cyan-400"
-    },
-    {
-      date: "Random Moments",
-      title: "The Little Things",
-      description: "Your way of thinking, your kindness, your presence - everything about you is magic.",
-      emoji: "✨",
-      color: "from-emerald-400 to-teal-400"
+      date: "Unexpected Truths",
+      title: "Rare Because You're Real ✨🌿",
+      description:
+        "You don’t try to be perfect — you're real, and that’s what makes you rare 💫. In a world full of filters and masks 🎭, your honesty feels like magic 🪄🌸.",
+      emoji: "🌿",
+      color: "from-lime-400 to-green-500"
     }
+
   ];
 
   useEffect(() => {
@@ -56,13 +44,12 @@ const TimelineSection = () => {
   }, []);
 
   return (
-    <section id="timeline" ref={sectionRef} className="py-20 px-4 sm:px-6">
+    <section id="about" ref={sectionRef} className="py-20 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text text-transparent">
-            Sweet Moments
+            It's your day
           </h2>
-          <p className="text-lg sm:text-xl text-gray-300">A timeline of memories that make my heart skip a beat</p>
         </div>
 
         <div className="relative">
@@ -96,8 +83,8 @@ const TimelineSection = () => {
                     <span className="text-pink-300 font-medium">{memory.date}</span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-2">{memory.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{memory.description}</p>
+                  <h3 className="text-[17px] font-bold text-white mb-2 ">{memory.title}</h3>
+                  <p className="text-gray-300 leading-relaxed text-sm">{memory.description}</p>
 
                   <div className="flex items-center mt-4 space-x-2">
                     <Heart className="w-4 h-4 text-pink-400 animate-pulse" />

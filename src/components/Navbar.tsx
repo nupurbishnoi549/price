@@ -42,7 +42,7 @@ const Navbar = () => {
               <div className="absolute inset-0 bg-pink-300/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <span className="text-white font-bold text-2xl bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text text-transparent">
-              For Anu
+              For Mashroom
             </span>
           </div>
 
@@ -50,7 +50,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-10">
             {[
               { label: 'Home', id: 'hero' },
-              { label: 'About Anu', id: 'about' },
+              { label: 'About Mashroom', id: 'about' },
               { label: 'Memories', id: 'timeline' },
               { label: 'Gallery', id: 'gallery' },
               { label: 'Surprises', id: 'surprises' },
@@ -86,7 +86,7 @@ const Navbar = () => {
           <div className="md:hidden flex flex-col items-center space-y-4 pb-6 pt-2">
             {[
               { label: 'Home', id: 'hero' },
-              { label: 'About Anu', id: 'about' },
+              { label: 'About Mashroom', id: 'about' },
               { label: 'Memories', id: 'timeline' },
               { label: 'Gallery', id: 'gallery' },
               { label: 'Surprises', id: 'surprises' },

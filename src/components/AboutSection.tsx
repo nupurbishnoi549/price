@@ -1,117 +1,75 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { CheckCircle, Sparkles, Crown, Heart } from 'lucide-react';
-import Anu from '../../public/anu.png'
+import React, { useEffect, useState } from 'react';
 
-const AboutSection = () => {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
+const shayaris = [
+  `zaraa sa kitabon main kam dhyaan hai,\nzyaada tere khayalon main hai,\ntujhse jo milke mazaa hai,\nkahan wo ganit ke sawaalon main hai.`,
+
+  `rakh loon chupa ke main kahin tujhko,\nsaaya bhi tera na main doon.`,
+
+  `aadat jaise hai tu meri,\naadatein kaise bhoolein bhala?`,
+
+  `Take my hand,\ntake my whole life too,\nFor I can't help being with you.`
+];
+
+const ShayariSection = () => {
+  const [visibleText, setVisibleText] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [currentBox, setCurrentBox] = useState(0);
+  const [completedShayaris, setCompletedShayaris] = useState([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
+    if (currentBox >= shayaris.length) return;
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentShayari = shayaris[currentBox];
+    const words = currentShayari.split(/(\s+|\n)/);
+
+    if (wordIndex < words.length) {
+      const timeout = setTimeout(() => {
+        setVisibleText((prev) => prev + words[wordIndex]);
+        setWordIndex((prev) => prev + 1);
+      }, 160);
+      return () => clearTimeout(timeout);
+    } else {
+      const timeout = setTimeout(() => {
+        setCompletedShayaris((prev) => [...prev, visibleText]);
+        setCurrentBox((prev) => prev + 1);
+        setVisibleText('');
+        setWordIndex(0);
+      }, 1500);
+      return () => clearTimeout(timeout);
     }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const qualities = [
-    { text: 'Brilliantly Smart', delay: '0s', icon: '🧠' },
-    { text: 'Breathtakingly Beautiful', delay: '0.2s', icon: '✨' },
-    { text: 'Royal Queen Vibes', delay: '0.4s', icon: '👑' },
-    { text: 'Too Special to Explain', delay: '0.6s', icon: '💎' }
-  ];
+  }, [wordIndex, currentBox]);
 
   return (
-    <section id="about" ref={sectionRef} className="py-32 px-6 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-transparent"></div>
+    <section className="min-h-screen py-14 px-4 bg-gradient-to-br from-[#fcefee] via-[#fff1f3] to-[#fdeee6] flex flex-col items-center justify-start space-y-10">
+      {/* Heading */}
+      <h2 className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500 bg-clip-text text-transparent drop-shadow-md">
+        🎁 Lyrics that reminds of you ✍️💖
+      </h2>
 
-      <div className="max-w-7xl mx-auto">
-        <div className={`grid lg:grid-cols-2 gap-16 items-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}>
-
-          {/* Enhanced Image Card */}
-          <div className="relative group">
-            <div className="backdrop-blur-xl bg-white/5 rounded-3xl p-10 border border-white/10 shadow-2xl transform group-hover:scale-105 transition-all duration-700 hover:shadow-pink-500/20">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-pink-300/20 via-purple-300/20 to-blue-300/20 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-400/10 to-purple-400/10 animate-pulse"></div>
-
-                {/* Floating elements around the image */}
-                <div className="absolute top-6 right-6">
-                  <Crown className="w-8 h-8 text-yellow-300 animate-bounce" />
-                </div>
-                <div className="absolute bottom-6 left-6">
-                  <Heart className="w-6 h-6 text-pink-300 animate-pulse" />
-                </div>
-                <div className="absolute top-6 left-6">
-                  <Sparkles className="w-7 h-7 text-purple-300 animate-spin-slow" />
-                </div>
-
-                {/* 🖼️ Anu's Image */}
-                <img
-                  src={Anu}
-                  alt="Anu"
-                  className="md:w-[250px] md:h-96 h-[230px] object-contain rounded-xl border-4 border-pink-300 shadow-xl z-10 animate-pulse"
-                />
-
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Enhanced Content */}
-          <div className="space-y-10">
-            <div>
-              <h2 className="text-6xl md:text-7xl font-bold text-white mb-8 bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300 bg-clip-text text-transparent">
-                About Anu
-              </h2>
-              <p className="text-2xl text-gray-200 leading-relaxed font-light">
-                Some people are born to be ordinary. But then there's Anu –
-                who decided to rewrite the definition of <span className="text-pink-300 font-semibold">extraordinary</span>.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {qualities.map((quality, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center space-x-6 backdrop-blur-xl bg-white/5 rounded-2xl p-6 border border-white/10 transform transition-all duration-700 hover:scale-105 hover:bg-white/10 hover:shadow-lg hover:shadow-pink-500/20 group cursor-pointer ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-                    }`}
-                  style={{ animationDelay: quality.delay }}
-                >
-                  <div className="text-3xl group-hover:scale-110 transition-transform duration-300">
-                    {quality.icon}
-                  </div>
-                  <CheckCircle className="w-7 h-7 text-emerald-400 flex-shrink-0 group-hover:animate-pulse" />
-                  <span className="text-xl font-medium text-white flex-1">{quality.text}</span>
-                  <Sparkles className="w-6 h-6 text-pink-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              ))}
-            </div>
-
-            <div className="backdrop-blur-xl bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-3xl p-8 border border-pink-300/20 hover:border-pink-300/40 transition-colors duration-500 group">
-              <div className="relative">
-                <div className="absolute -top-2 -left-2 text-4xl opacity-30">"</div>
-                <p className="text-xl text-pink-100 italic leading-relaxed font-light pl-6">
-                  In a world full of copies, she chose to be an original masterpiece.
-                </p>
-                <div className="absolute -bottom-2 -right-2 text-4xl opacity-30 rotate-180">"</div>
-              </div>
-            </div>
-          </div>
+      {/* Completed Shayaris */}
+      {completedShayaris.map((shayari, index) => (
+        <div
+          key={index}
+          className="max-w-2xl w-full bg-[#3b2a4e] rounded-2xl border border-white/20 shadow-xl p-6 text-center"
+        >
+          <p className="text-lg md:text-2xl font-medium whitespace-pre-line text-white leading-relaxed">
+            {shayari}
+          </p>
         </div>
-      </div>
+      ))}
+
+      {/* Currently Typing Shayari */}
+      {currentBox < shayaris.length && (
+        <div className="max-w-2xl w-full bg-[#4c3567] rounded-2xl border border-white/25 shadow-xl p-6 text-center">
+          <p className="text-lg md:text-2xl font-medium whitespace-pre-line text-white leading-relaxed">
+            {visibleText}
+            <span className="animate-pulse text-pink-400">|</span>
+          </p>
+        </div>
+      )}
     </section>
+
   );
 };
 
-export default AboutSection;
+export default ShayariSection;
