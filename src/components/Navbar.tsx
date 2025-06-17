@@ -38,7 +38,7 @@ const Navbar = () => {
       backdrop-blur-2xl border-b border-white/10 
       ${isScrolled ? 'bg-black/30 shadow-xl shadow-purple-500/10' : 'bg-black/10'}
     `}>
-      <div className="max-w-7xl mx-auto px-6 py-4 md:py-5 flex flex-col items-center justify-center gap-4">
+      <div className="max-w-7xl mx-auto px-6 py-4  flex flex-col items-center justify-center max-md:gap-4">
 
         {/* Emoji Buttons Only */}
         <div className="flex flex-wrap justify-center items-center gap-6">

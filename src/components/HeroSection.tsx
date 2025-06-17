@@ -84,7 +84,7 @@ Wishing you a very Happy Birthday ❣️🌸 May your day be as special as you a
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex flex-col items-center ">
             <div className="w-0.5 h-16 bg-gradient-to-b from-pink-400 via-rose-400 to-transparent rounded-full"></div>
             <div className="w-2 h-2 bg-rose-400 rounded-full animate-pulse"></div>
           </div>

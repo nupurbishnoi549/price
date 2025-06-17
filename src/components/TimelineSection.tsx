@@ -25,7 +25,7 @@ const TimelineSection = () => {
       date: "Unspoken Efforts",
       title: "Show-Off Nahi, Tu Hi Kaafi Hai 🫀",
       description:
-        "Tere jaisa hi tu reh 🧍‍♂️, baat kam kare 🤫, par sachcha rahe 🧡.\n" +
+        "Tere jaisa hi tu rahe 🧍‍♂️, baat kam kare 🤫, par sachcha rahe 🧡.\n" +
         "Pyaar dikhaye na sahi 💬, par mehsoos toh ho 💓.\n" +
         "Tere har silence mein ek apnapan sa ho 🤍🌌.\n\n" +
         "Tu photo na maange, theek hai 📷🚫,\n" +
